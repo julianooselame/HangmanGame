@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+</head>
+<body>
+    <h1>HANGMAN GAME!</h1>
+    <div class="fields" id="wordfield">
+        <p class="word" id="word"></p>
+    </div>
+    <div class="wordinput">
+        <input class="wordinput" id="guessinput" maxlength="1">
+        <button class="btn" id="btngo">GO!</button>
+    </div>
+    <div class="played" id="played">
+        <h2>Letras Jogadas</h2>
+        <p class="playedletters" id="playedletters"></p>
+    </div>
+    <div class="tries" id="tries">
+        <h2>Tentativas Restante!</h2>
+        <p class="tentativas" id="left"></p>
+    </div>
+    <div class="gueime" id="gueime">
+        <h2>START / RESTART</h2>
+        <button class="startgamu" id="btnstart">START GAME</button>
+    </div>
+    <!-- javascript -->
+    <script src="app.js"></script>
+</body>
+</html>
