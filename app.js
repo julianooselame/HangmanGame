@@ -64,10 +64,10 @@ buttonGo.addEventListener('click', function() {
 		playedString += inputGuess.value.toUpperCase() + ' ';
 		played.innerText = playedString;
 		word.innerText = spot;
-		console.log('altered ' + blankSpaces);
 		inputGuess.value = '';
 		numTries -= 1;
 		triesNumber.innerText = numTries;
+
 		if (arraysMatch(blankSpaces, wordLetters)) {
 			document.getElementById('btngo').disabled = true;
 			setTimeout(() => {
@@ -82,11 +82,10 @@ buttonGo.addEventListener('click', function() {
 	} else {
 		alert('Digite uma Letra!!!');
 	}
-	console.log('SPOT2 ' + spot);
-	console.log('blank ' + blankSpaces);
+
 	word.innerText = spot;
 });
-console.log('altered ' + blankSpaces);
+
 playedString = '';
 played.innerText = '';
 
@@ -106,22 +105,19 @@ function gameStart() {
 
 	numTries = chosenWord.length + 3;
 
-	console.log('TRIES ' + numTries);
-
 	triesNumber.innerText = numTries;
 
 	spot = writeSpaces(chosenWord);
-	console.log('SPOT' + spot);
 	word.innerText = spot;
+}
 
-	function writeSpaces(chosenWord) {
-		let spot = '';
-		for (let i = 0; i < chosenWord.length; i++) {
-			spot += blankSpaces[i] + ' ';
-		}
-
-		return spot;
+function writeSpaces(chosenWord) {
+	let spot = '';
+	for (let i = 0; i < chosenWord.length; i++) {
+		spot += blankSpaces[i] + ' ';
 	}
+
+	return spot;
 }
 
 function arraysMatch(arr1, arr2) {
